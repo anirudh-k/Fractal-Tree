@@ -6,7 +6,7 @@ var slider;
 // creates canvas and angle slider
 function setup() {
   	createCanvas(800, 800);
-  	slider = createSlider(0, PI / 2, PI / 16, 0.01);
+  	slider = createSlider(0, PI / 2, PI / 8, 0.01);
 }
 
 // required for p5.js project

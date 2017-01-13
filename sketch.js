@@ -5,30 +5,31 @@ var slider;
 // required for p5.js project
 // creates canvas and angle slider
 function setup() {
-  createCanvas(800, 800);
-  slider = createSlider(0, PI, PI / 4, 0.01);
+  	createCanvas(800, 800);
+  	slider = createSlider(0, PI / 2, PI / 16, 0.01);
 }
 
 // required for p5.js project
 // initiates the branch recursion for drawing the tree
 function draw() {
-  background(51);
+  	background(51);
+  	stroke(255);
 
-  angle = slider.value();
+  	angle = slider.value();
 
-  stroke(255);
-
-  translate(width / 2, height);
-
-  branch(200);
+  	translate(width / 2, height);
+  	branch(width / 4);
 }
 
 // recursive method that draws a tree with a variable angle
 // @param len the length of the branch of the tree
 function branch(len) {
+	// changes the thickness of the branch based on the length of the branch
 	strokeWeight(ceil(len / 10));
 
+	// draws a branch
 	line(0, 0, 0, -len);
+	// moves the origin to (0, -len)
 	translate(0, -len);
 	
 	if (len > 2) {

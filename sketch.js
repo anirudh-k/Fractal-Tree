@@ -49,5 +49,4 @@ function branch(len) {
 
 		pop();
 	}
-	//line(0, 0, 0, -len * (2/3));
 }
